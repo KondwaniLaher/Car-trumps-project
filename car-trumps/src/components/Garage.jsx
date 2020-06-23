@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import axios from "axios";
-import SingleCar from "./Single-Car";
 import Loader from "./Loader";
+import CarCard from "./Car-card";
 
 class Garage extends Component {
   state = {
-    Cars: [],
+    cars: [],
     isLoading: true,
   };
   componentDidMount() {
@@ -15,6 +15,7 @@ class Garage extends Component {
     axios
       .get("https://kondwani-project1.herokuapp.com/cars")
       .then(({ data }) => {
+        console.log(data);
         this.setState({ cars: data.cars, isLoading: false });
       });
   };
@@ -22,7 +23,7 @@ class Garage extends Component {
   render() {
     if (this.state.isLoading) return <Loader />;
     return this.state.cars.map((car) => {
-      return <SingleCar key={car.id} {...car} />;
+      return <CarCard key={car.id} {...car} />;
     });
   }
 }
