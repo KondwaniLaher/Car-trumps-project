@@ -13,7 +13,7 @@ class Garage extends Component {
   }
   getCars = () => {
     axios
-      .get("https://nc-student-tracker.herokuapp.com/api/students")
+      .get("https://kondwani-project1.herokuapp.com/cars")
       .then(({ data }) => {
         this.setState({ cars: data.cars, isLoading: false });
       });
