@@ -1,20 +1,11 @@
 import React from "react";
-import { Link } from "@reach/router";
 
-const Nav = () => {
+const Title = () => {
   return (
-    <nav className="Nav">
-      <button>
-        <Link to="/">Home</Link>
-      </button>
-      <button>
-        <Link to="/Welcome">Welcome</Link>
-      </button>
-      <button>
-        <Link to="/Garage">View Garage</Link>
-      </button>
-    </nav>
+    <header>
+      <h1>Kondwani's Car Trumps App</h1>
+    </header>
   );
 };
 
-export default Nav;
+export default Title;

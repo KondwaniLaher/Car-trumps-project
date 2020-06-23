@@ -11,7 +11,7 @@ function App() {
       <Title />
       <Nav />
       <Router>
-        <Home />
+        <Home path="/" />
       </Router>
     </>
   );
