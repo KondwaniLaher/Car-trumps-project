@@ -5,6 +5,9 @@ import Nav from "./components/Nav";
 import Home from "./components/Home";
 import Garage from "./components/Garage";
 import { Router } from "@reach/router";
+import SingleCar from "./components/Single-Car";
+import Rules from "./components/Rules";
+import CarAdder from "./components/Car-Adder";
 
 function App() {
   return (
@@ -13,7 +16,10 @@ function App() {
       <Nav />
       <Router>
         <Home path="/" />
-        <Garage path="/cars" />
+        <Rules path="/rules" />
+        <Garage path="/cars/*" />
+        <SingleCar path="cars/:id" />
+        <CarAdder path="/car-adder" />
       </Router>
     </>
   );

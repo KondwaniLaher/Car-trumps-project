@@ -2,14 +2,15 @@ import React from "react";
 import { Link } from "@reach/router";
 
 const CarCard = (props) => {
-  console.log(props);
-  const { name, id } = props;
+  const { Name, id, appeal } = props;
+  console.log([appeal.Appeal_slug] + "hello");
   return (
-    <div>
+    <main>
       <Link to={`/cars/${id}`}>
-        <h2>{name}</h2>
+        <h2>{Name}</h2>
+        <h4>{"Click for stats"}</h4>
       </Link>
-    </div>
+    </main>
   );
 };
 
