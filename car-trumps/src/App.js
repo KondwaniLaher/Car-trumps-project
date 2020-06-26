@@ -8,6 +8,7 @@ import { Router } from "@reach/router";
 import SingleCar from "./components/Single-Car";
 import Rules from "./components/Rules";
 import CarAdder from "./components/Car-Adder";
+import Game from "./components/Game";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Garage path="/cars/*" />
         <SingleCar path="cars/:id" />
         <CarAdder path="/car-adder" />
+        <Game path="/game" />
       </Router>
     </>
   );

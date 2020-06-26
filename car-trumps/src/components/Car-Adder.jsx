@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Axios from "axios";
 
 class CarAdder extends Component {
   state = {
@@ -17,6 +18,22 @@ class CarAdder extends Component {
       // we get the name of the stat we're changing, then we pull up the current cost in an object
       //we assign the cost stored in the option node and return that to our new state
       return { [name]: value, cost: { ...currentState.cost, name: +cost } };
+    });
+  };
+  handleSubmit = (event) => {
+    event.preventDefault();
+    Axios.post("https://kondwani-project1.herokuapp.com/cars", {
+      ...this.state,
+    }).then((response) => {
+      console.log(response);
+    });
+    this.setState({
+      Name: "",
+      Appeal_slug: "",
+      Power_slug: "",
+      Quickness_slug: "",
+      Top_speed_slug: "",
+      Weight_slug: "",
     });
   };
   render() {
