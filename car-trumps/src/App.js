@@ -13,16 +13,18 @@ import Game from "./components/Game";
 function App() {
   return (
     <>
-      <Title />
-      <Nav />
-      <Router>
-        <Home path="/" />
-        <Rules path="/rules" />
-        <Garage path="/cars/*" />
-        <SingleCar path="cars/:id" />
-        <CarAdder path="/car-adder" />
-        <Game path="/game" />
-      </Router>
+      <body>
+        <Title />
+        <Nav />
+        <Router>
+          <Home path="/" />
+          <Rules path="/rules" />
+          <Garage path="/cars/*" />
+          <SingleCar path="cars/:id" />
+          <CarAdder path="/car-adder" />
+          <Game path="/game" />
+        </Router>
+      </body>
     </>
   );
 }

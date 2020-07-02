@@ -31,7 +31,7 @@ class Garage extends Component {
     const { isLoading, cars } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <main>
+      <main class="garage">
         <Router>
           <CarAdder path="add-car" addCar={this.addCar} />
         </Router>

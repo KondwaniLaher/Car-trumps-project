@@ -5,7 +5,7 @@ const CarCard = (props) => {
   const { Name, id, appeal } = props;
   console.log([appeal.Appeal_slug] + "hello");
   return (
-    <main>
+    <main class="car-card">
       <Link to={`/cars/${id}`}>
         <h2>{Name}</h2>
         <h4>{"Click for stats"}</h4>

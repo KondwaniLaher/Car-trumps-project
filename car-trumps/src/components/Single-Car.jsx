@@ -39,20 +39,26 @@ class SingleCar extends Component {
       <main className="SingleCar">
         <section>
           <h3>{Name}</h3>
-          <p>
-            Appeal: {[appeal.Appeal_slug]} Cost: ${[appeal.Appeal]}
+          <img
+            src="https://banner2.cleanpng.com/20180221/vgw/kisspng-sports-car-luxury-vehicle-royalty-free-vector-realistic-red-sports-car-5a8df1289503b3.0708040015192517526104.jpg"
+            alt="Car"
+          />
+          <p class="stat">
+            Appeal: {[appeal.Appeal_slug]} <br /> Cost: ${[appeal.Appeal]}
           </p>
-          <p>
-            Power: {[power.Power_slug]} Cost: ${[power.cost]}
+          <p class="stat">
+            Power: {[power.Power_slug]} <br /> Cost: ${[power.cost]}
           </p>
-          <p>
-            Quickness:{[quickness.Quickness_slug]} Cost: ${[quickness.cost]}
+          <p class="stat">
+            Quickness:{[quickness.Quickness_slug]} <br /> Cost: $
+            {[quickness.cost]}
           </p>
-          <p>
-            Top Speed:{[top_speed.Top_speed_slug]} Cost: ${[top_speed.cost]}
+          <p class="stat">
+            Top Speed:{[top_speed.Top_speed_slug]} <br /> Cost: $
+            {[top_speed.cost]}
           </p>
-          <p>
-            Weight: {[weight.Weight_slug]} Cost: ${[weight.cost]}
+          <p class="stat">
+            Weight: {[weight.Weight_slug]} <br /> Cost: ${[weight.cost]}
           </p>
         </section>
       </main>
@@ -61,3 +67,13 @@ class SingleCar extends Component {
 }
 
 export default SingleCar;
+
+// https://ibb.co/yRW6JDW
+// https://ibb.co/5GKQ2D7
+// https://ibb.co/n7GRdZH
+// https://ibb.co/zhxrkYt
+// https://ibb.co/F3vPhSk
+// https://ibb.co/c2vPVq6
+// https://ibb.co/CwdsgJB
+// https://ibb.co/9ZyhT0G
+// https://ibb.co/WkNmnyL

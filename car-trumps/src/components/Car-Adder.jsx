@@ -36,121 +36,134 @@ class CarAdder extends Component {
       Weight_slug: "",
     });
   };
+
   render() {
     return (
-      <form>
-        <label>
-          Name:
-          <input type="text" />
-        </label>
-        <br />
-        <label>
-          Appeal:
-          <select onChange={this.handleInput} name="appeal">
-            <option value="Banger" cost="1">
-              Banger (£1)
-            </option>
-            <option value="Normal" cost="2">
-              Normal (£2)
-            </option>
-            <option value="Sporty" cost="3">
-              Sporty (£3)
-            </option>
-            <option value="Fancy" cost="4">
-              Fancy (£4)
-            </option>
-            <option value="Luxuriou$" cost="5">
-              Luxuriou$ (£5)
-            </option>
-          </select>
-        </label>
-        <br />
-        <label>
-          Power:
-          <select onChange={this.handleInput} name="power">
-            <option value="Puny" cost="1">
-              Puny (£1)
-            </option>
-            <option value="Weak" cost="2">
-              Weak (£2)
-            </option>
-            <option value="normal" cost="3">
-              normal (£3)
-            </option>
-            <option value="Punchy" cost="4">
-              Punchy (£4)
-            </option>
-            <option value="Brutal" cost="5">
-              Brutal (£5)
-            </option>
-          </select>
-        </label>
-        <br />
-        <label>
-          Quickness:
-          <select onChange={this.handleInput} name="quickness">
-            <option value="Slug like" cost="1">
-              Slug like (£1)
-            </option>
-            <option value="Slow" cost="2">
-              Slow (£2)
-            </option>
-            <option value="Average" cost="3">
-              Average (£3)
-            </option>
-            <option value="Zippy" cost="4">
-              Zippy (£4)
-            </option>
-            <option value="Lightning" cost="5">
-              Lightning (£5)
-            </option>
-          </select>
-        </label>
-        <br />
-        <label>
-          Top Speed:
-          <select onChange={this.handleInput} name="top_speed">
-            <option value="Pathetic" cost="1">
-              Pathetic (£1)
-            </option>
-            <option value="Comfortable" cost="2">
-              Comfortable (£2)
-            </option>
-            <option value="Average" cost="3">
-              Average (£3)
-            </option>
-            <option value="White_knuckle" cost="4">
-              White knuckle (£4)
-            </option>
-            <option value="Warp Speed" cost="5">
-              Warp Speed (£5)
-            </option>
-          </select>
-        </label>
-        <br />
-        <label>
-          Weight:
-          <select onChange={this.handleInput} name="Weight">
-            <option value="Feather" cost="1">
-              Feather (£1)
-            </option>
-            <option value="Lightweight" cost="2">
-              Lightweight (£2)
-            </option>
-            <option value="Average" cost="3">
-              Average (£3)
-            </option>
-            <option value="Hefty" cost="4">
-              Hefty (£4)
-            </option>
-            <option value="Tank" cost="5">
-              Tank (£5)
-            </option>
-          </select>
-        </label>
-        <br />
-        <button type="submit">Add car to garage</button>
-      </form>
+      <section class="carCreate">
+        <h1>Welcome to the Chop shop!</h1>
+        <p>
+          Here you can create cars to add to your fleet to use during the game.{" "}
+          <br />
+          Each vehicle you make must use 1 of each of the 5 stats on offer, each
+          car must total $15. <br />
+          Once you have finished creating your vehicle, go ahead and add it to
+          the garage. from there you can add it as part of your fleet to take on
+          the world!
+        </p>
+        <form>
+          <label>
+            Name:
+            <input type="text" />
+          </label>
+          <br />
+          <label>
+            Appeal:
+            <select onChange={this.handleInput} name="appeal">
+              <option value="Banger" cost="1">
+                Banger (£1)
+              </option>
+              <option value="Normal" cost="2">
+                Normal (£2)
+              </option>
+              <option value="Sporty" cost="3">
+                Sporty (£3)
+              </option>
+              <option value="Fancy" cost="4">
+                Fancy (£4)
+              </option>
+              <option value="Luxuriou$" cost="5">
+                Luxuriou$ (£5)
+              </option>
+            </select>
+          </label>
+          <br />
+          <label>
+            Power:
+            <select onChange={this.handleInput} name="power">
+              <option value="Puny" cost="1">
+                Puny (£1)
+              </option>
+              <option value="Weak" cost="2">
+                Weak (£2)
+              </option>
+              <option value="normal" cost="3">
+                normal (£3)
+              </option>
+              <option value="Punchy" cost="4">
+                Punchy (£4)
+              </option>
+              <option value="Brutal" cost="5">
+                Brutal (£5)
+              </option>
+            </select>
+          </label>
+          <br />
+          <label>
+            Quickness:
+            <select onChange={this.handleInput} name="quickness">
+              <option value="Slug like" cost="1">
+                Slug like (£1)
+              </option>
+              <option value="Slow" cost="2">
+                Slow (£2)
+              </option>
+              <option value="Average" cost="3">
+                Average (£3)
+              </option>
+              <option value="Zippy" cost="4">
+                Zippy (£4)
+              </option>
+              <option value="Lightning" cost="5">
+                Lightning (£5)
+              </option>
+            </select>
+          </label>
+          <br />
+          <label>
+            Top Speed:
+            <select onChange={this.handleInput} name="top_speed">
+              <option value="Pathetic" cost="1">
+                Pathetic (£1)
+              </option>
+              <option value="Comfortable" cost="2">
+                Comfortable (£2)
+              </option>
+              <option value="Average" cost="3">
+                Average (£3)
+              </option>
+              <option value="White_knuckle" cost="4">
+                White knuckle (£4)
+              </option>
+              <option value="Warp Speed" cost="5">
+                Warp Speed (£5)
+              </option>
+            </select>
+          </label>
+          <br />
+          <label>
+            Weight:
+            <select onChange={this.handleInput} name="Weight">
+              <option value="Feather" cost="1">
+                Feather (£1)
+              </option>
+              <option value="Lightweight" cost="2">
+                Lightweight (£2)
+              </option>
+              <option value="Average" cost="3">
+                Average (£3)
+              </option>
+              <option value="Hefty" cost="4">
+                Hefty (£4)
+              </option>
+              <option value="Tank" cost="5">
+                Tank (£5)
+              </option>
+            </select>
+          </label>
+          <br />
+          <button type="submit">Add car to garage</button>
+        </form>
+      </section>
     );
   }
 }
