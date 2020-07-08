@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Axios from "axios";
+import axios from "axios";
 
 class CarAdder extends Component {
   state = {
@@ -22,24 +22,28 @@ class CarAdder extends Component {
   };
   handleSubmit = (event) => {
     event.preventDefault();
-    Axios.post("https://kondwani-project1.herokuapp.com/cars", {
-      ...this.state,
-    }).then((response) => {
-      console.log(response);
-    });
-    this.setState({
-      Name: "",
-      Appeal_slug: "",
-      Power_slug: "",
-      Quickness_slug: "",
-      Top_speed_slug: "",
-      Weight_slug: "",
-    });
+    // add car to database
+    axios
+      .post("https://kondwani-project1.herokuapp.com/cars", { ...this.state })
+      .then((response) => {
+        console.log(response);
+      });
+
+    //     this.props.addCar(data.addCar);
+    //   });
+    // this.setState({
+    //   Name: "",
+    //   Appeal_slug: "",
+    //   Power_slug: "",
+    //   Quickness_slug: "",
+    //   Top_speed_slug: "",
+    //   Weight_slug: "",
+    // });
   };
 
   render() {
     return (
-      <section class="carCreate">
+      <section className="carCreate">
         <h1>Welcome to the Chop shop!</h1>
         <p>
           Here you can create cars to add to your fleet to use during the game.{" "}
@@ -50,7 +54,7 @@ class CarAdder extends Component {
           the garage. from there you can add it as part of your fleet to take on
           the world!
         </p>
-        <form>
+        <form onSubmit={this.handleSubmit}>
           <label>
             Name:
             <input type="text" />

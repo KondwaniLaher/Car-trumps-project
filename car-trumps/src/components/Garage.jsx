@@ -4,6 +4,7 @@ import Loader from "./Loader";
 import CarCard from "./Car-card";
 import { Router } from "@reach/router";
 import CarAdder from "./Car-Adder";
+import SingleCar from "./Single-Car";
 
 class Garage extends Component {
   state = {
@@ -17,12 +18,11 @@ class Garage extends Component {
     axios
       .get("https://kondwani-project1.herokuapp.com/cars")
       .then(({ data }) => {
-        console.log(data);
         this.setState({ cars: data, isLoading: false });
       });
   };
   addCar = (newCar) => {
-    this.setStata((currentState) => {
+    this.setState((currentState) => {
       return { cars: [newCar, ...currentState.cars] };
     });
   };
@@ -31,9 +31,10 @@ class Garage extends Component {
     const { isLoading, cars } = this.state;
     if (isLoading) return <Loader />;
     return (
-      <main class="garage">
+      <main className="garage">
         <Router>
           <CarAdder path="add-car" addCar={this.addCar} />
+          <SingleCar path=":id" />
         </Router>
         <ul>
           {cars.map((car) => {

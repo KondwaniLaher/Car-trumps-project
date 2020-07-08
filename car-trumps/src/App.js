@@ -13,7 +13,7 @@ import Game from "./components/Game";
 function App() {
   return (
     <>
-      <body>
+      <div className="bg">
         <Title />
         <Nav />
         <Router>
@@ -24,7 +24,7 @@ function App() {
           <CarAdder path="/car-adder" />
           <Game path="/game" />
         </Router>
-      </body>
+      </div>
     </>
   );
 }
