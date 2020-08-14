@@ -36,13 +36,13 @@ class CarAdder extends Component {
 
         <form onSubmit={this.handleSubmit}>
           <p>
-            Here you can create cars to add to your fleet to use during the
-            game. <br />
-            Each vehicle you make must use 1 of each of the 5 stats on offer,
-            each car must total $15. <br />
+            Here you can create cars to add to your fleet
+            <br />
+            Each stat has a different cost. Why not try and make cars within
+            different budgets and see what combinations you can come up with!
+            <br />
             Once you have finished creating your vehicle, go ahead and add it to
-            the garage. from there you can add it as part of your fleet to take
-            on the world!
+            the garage so you can show the world your creation!
           </p>
           <label>
             Name:
