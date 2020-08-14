@@ -26,19 +26,8 @@ class CarAdder extends Component {
     axios
       .post("https://kondwani-project1.herokuapp.com/cars", { ...this.state })
       .then((response) => {
-        console.log(response);
+        console.log("the form has been submitted");
       });
-
-    //     this.props.addCar(data.addCar);
-    //   });
-    // this.setState({
-    //   Name: "",
-    //   Appeal_slug: "",
-    //   Power_slug: "",
-    //   Quickness_slug: "",
-    //   Top_speed_slug: "",
-    //   Weight_slug: "",
-    // });
   };
 
   render() {
@@ -54,10 +43,11 @@ class CarAdder extends Component {
           the garage. from there you can add it as part of your fleet to take on
           the world!
         </p>
+
         <form onSubmit={this.handleSubmit}>
           <label>
             Name:
-            <input type="text" />
+            <input type="text" onChange={this.handleInput} name="Name" />
           </label>
           <br />
           <label>
@@ -165,6 +155,7 @@ class CarAdder extends Component {
             </select>
           </label>
           <br />
+          <p>You have {this.state.TotalCost} points left</p>
           <button type="submit">Add car to garage</button>
         </form>
       </section>
