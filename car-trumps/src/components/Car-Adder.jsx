@@ -4,7 +4,6 @@ import axios from "axios";
 class CarAdder extends Component {
   state = {
     cost: { appeal: 3, power: 3, quickness: 3, top_speed: 3, weight: 3 },
-    TotalCost: 15,
     Name: "",
     Appeal_slug: "Banger",
     Power_slug: "Puny",
@@ -34,17 +33,17 @@ class CarAdder extends Component {
     return (
       <section className="carCreate">
         <h1>Welcome to the Chop shop!</h1>
-        <p>
-          Here you can create cars to add to your fleet to use during the game.{" "}
-          <br />
-          Each vehicle you make must use 1 of each of the 5 stats on offer, each
-          car must total $15. <br />
-          Once you have finished creating your vehicle, go ahead and add it to
-          the garage. from there you can add it as part of your fleet to take on
-          the world!
-        </p>
 
         <form onSubmit={this.handleSubmit}>
+          <p>
+            Here you can create cars to add to your fleet to use during the
+            game. <br />
+            Each vehicle you make must use 1 of each of the 5 stats on offer,
+            each car must total $15. <br />
+            Once you have finished creating your vehicle, go ahead and add it to
+            the garage. from there you can add it as part of your fleet to take
+            on the world!
+          </p>
           <label>
             Name:
             <input type="text" onChange={this.handleInput} name="Name" />
@@ -155,8 +154,9 @@ class CarAdder extends Component {
             </select>
           </label>
           <br />
-          <p>You have {this.state.TotalCost} points left</p>
-          <button type="submit">Add car to garage</button>
+          <button type="submit" class="btn">
+            Add car to garage
+          </button>
         </form>
       </section>
     );

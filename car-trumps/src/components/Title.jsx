@@ -3,7 +3,7 @@ import React from "react";
 const Title = () => {
   return (
     <header>
-      <h1>Kondwani's Car Trumps App</h1>
+      <h1>Car Trumps</h1>
     </header>
   );
 };

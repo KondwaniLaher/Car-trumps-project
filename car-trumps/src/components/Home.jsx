@@ -3,7 +3,7 @@ import React from "react";
 const Home = () => {
   return (
     <main>
-      <h1>Hello and welcome to your Garage!</h1>
+      <h1>Hello and welcome to Car Trumps!</h1>
       <ul>
         <li>
           Within this app you can take a look at some of the finest vehicles in
@@ -11,8 +11,8 @@ const Home = () => {
           wheels in there.
         </li>
         <li>
-          Head over to the vehicle adder if theres a ride you want to add to the
-          garage yourself.
+          Head over to the vehicle adder if theres a ride you want to add your
+          own creation to the garage yourself.
         </li>
       </ul>
     </main>

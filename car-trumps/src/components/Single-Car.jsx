@@ -67,13 +67,3 @@ class SingleCar extends Component {
 }
 
 export default SingleCar;
-
-// https://ibb.co/yRW6JDW
-// https://ibb.co/5GKQ2D7
-// https://ibb.co/n7GRdZH
-// https://ibb.co/zhxrkYt
-// https://ibb.co/F3vPhSk
-// https://ibb.co/c2vPVq6
-// https://ibb.co/CwdsgJB
-// https://ibb.co/9ZyhT0G
-// https://ibb.co/WkNmnyL
